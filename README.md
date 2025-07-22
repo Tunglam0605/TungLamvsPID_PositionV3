@@ -2,7 +2,7 @@
 **Thư viện điều khiển vị trí động cơ DC sử dụng encoder + PID, hỗ trợ đa động cơ, tối ưu cho Arduino Due, Mega, Uno...**
 
 > **Tác giả:** Nguyễn Khắc Tùng Lâm  
-> Facebook: [Lâm Tùng](https://facebook.com/tunglam0605)  
+> Facebook: [Lâm Tùng](https://facebook.com/tunglam060504)  
 > TikTok: [@tunglam.automatic](https://tiktok.com/@tunglam.automatic)  
 > SĐT: 0325270213
 
