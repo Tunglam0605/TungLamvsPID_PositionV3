@@ -25,15 +25,9 @@
 
 ## ⚡️ CÀI ĐẶT
 
-``bash
-# Cách 1: Copy source thủ công
-Copy 2 file MotorPID_Position_V3.h và MotorPID_Position_V3.cpp vào thư mục `libraries/MotorPID_Position` của Arduino IDE.
-
-# Cách 2: Nén cả folder -> cài đặt qua IDE
-Sketch > Include Library > Add .ZIP Library... > Chọn file zip của bạn.
-
-# Sau đó: Tạo file .ino mới và #include như hướng dẫn phía dưới!
-
+1. Copy 2 file MotorPID_Position.h và MotorPID_Position.cpp vào thư mục libraries/MotorPID_Position của Arduino IDE.
+2. Hoặc nén cả thư mục thành .zip rồi cài từ IDE (Sketch > Include Library > Add .ZIP Library…).
+3. Tạo mới file .ino, dùng như ví dụ phía dưới.
 ---
 
 ## 🎮 CÁCH SỬ DỤNG CƠ BẢN
