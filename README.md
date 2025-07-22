@@ -35,10 +35,12 @@
 
 ```cpp
 #include "MotorPID_Position_V3.h"
-#define PPR 3600 // Số xung mỗi vòng (tuỳ encoder thực tế)
+#define PPR 3600  // Số xung trên 1 vòng encoder (tùy loại động cơ/encoder thực tế)
 
-MotorPID_Position motor1(37, 36, 2, 3, 5.65, 0.065, 0.1, PPR); 
-MotorPID_Position motor2(35, 34, 4, 5, 5.65, 0.065, 0.1, PPR); // Thêm động cơ thoải mái!
+// ==== Khai báo 2 động cơ PID Position ====
+// ENCA, ENCB, PWM thuận, PWM nghịch, Kp, Ki, Kd, PPR
+MotorPID_Position motor1(37, 36, 2, 3, 5.5, 0.065, 0.1, PPR);
+MotorPID_Position motor2(35, 34, 4, 5, 5.5, 0.065, 0.1, PPR);
 ```
 2️⃣ Khởi tạo trong setup()
 ```cpp
@@ -91,11 +93,12 @@ void setup() {
 }
 
 void loop() {
-    if (Serial.available()) {
-        // ... Xử lý lệnh Serial như hướng dẫn dưới đây!
-    }
-    motor1.Position();
-    motor2.Position();
+  // Giao tiếp Serial cho động cơ (tùy chọn lệnh qua máy tính)
+    MotorPID_Position* motors[2] = {&motor1, &motor2};
+    MotorPID_Position::handleSerialControl(motors, 2);
+
+  motor1.Position();
+  motor2.Position();
 }
 ```
 💬 CÁC LỆNH SERIAL HỖ TRỢ
